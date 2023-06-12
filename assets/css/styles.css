@@ -1,0 +1,160 @@
+:root {
+    --color-purple: #7744EB;
+    --color-green: #03CEA4;
+    --color-blue: #009EFF;
+}
+
+@font-face {
+    font-family: SequelBlack;
+    src: url(../fonts/sequelblack.ttf);
+}
+
+@font-face {
+    font-family: Geologica;
+    src: url(../fonts/geologica.ttf);
+}
+
+@font-face {
+    font-family: GeologicaREG;
+    src: url(../fonts/geologica-regular.ttf);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-image: url(../images/bg.webp);
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    color: white;
+    font-family: SequelBlack;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+div.description {
+    font-family: SequelBlack;
+    font-size: 18px;
+    display: flex;
+    gap: 7.5px;
+    text-transform: uppercase;
+}
+
+div.description span:nth-child(1) {
+    color: #03CEA4;
+}
+
+div.description span:nth-child(2) {
+    color: #009EFF;
+}
+
+div.description span:nth-child(3) {
+    color: #7744EB;
+}
+
+div.button-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+div.button-wrap a {
+    display: grid;
+    align-items: center;
+    padding-inline: 20px;
+    padding-block: 10px;
+    color: white;
+    border-radius: 3px;
+    font-family: GeologicaREG;
+    animation-duration: 2s;
+}
+
+div.button-wrap a:nth-child(1) {
+    background-color: var(--color-green);
+}
+
+div.button-wrap a:nth-child(2) {
+    background-color: var(--color-purple);
+}
+
+div.button-wrap a:hover {
+    animation: buttonAnimation .3s forwards;
+}
+
+@keyframes buttonAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+a.discord {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
+    color: white;
+    font-family: GeologicaREG;
+    font-size: 16px;
+
+    margin-top: 20px;
+}
+
+a.discord>img:nth-child(1) {
+    aspect-ratio: 1/1;
+    width: 30px;
+    margin-right: 10px;
+}
+
+a.discord>img:nth-child(2) {
+    margin-top: 3px;
+    aspect-ratio: 1/1;
+    width: 25px;
+}
+
+@media screen and (max-width: 700px) {
+    div.button-wrap {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    div.description {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    div.description {
+        font-size: 13px;
+    }
+}
